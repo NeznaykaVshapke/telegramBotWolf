@@ -5,7 +5,7 @@ from notifiers import get_notifier
 import time
 from help import help_str
 cg = CoinGeckoAPI()
-token = '5629522873:AAEGaXpK2zCpDMXreLeSwg3Qltuas_MtIMc'
+token = 'сюда Ваш токен'
 bot = telebot.TeleBot(token)
 
 name = ''
@@ -99,7 +99,7 @@ def give_price(message):
             bot.send_message(message.from_user.id, "На какую криптовалюту хотите настроить уведомления?", reply_markup=markup1)
             bot.register_next_step_handler(message, get_valute_of_uved_counter)
 
-    if message.text == 'stop noticeCripto':
+    if message.text == 'stop nCripto':
         mes_true = True
         close_uved_flag = True
 
